@@ -1,22 +1,10 @@
 declare module '@augu/dotenv' {
-  /**
-   * Populates an `.env` file
-   * @param options The options to use
-   */
-  function parse<T extends object>(options: PopulatedParseOptions<T>): void;
-
-  /**
-   * Returns the parsed results from the `.env` file
-   * @param options The options to use
-   */
-  function parse<T extends object>(options: UnpopulatedParseOptions<T>): T;
-
   type Class<T> = {
     new (...args: any[]): T;
   }
 
   interface UnpopulatedParseOptions<T extends object> {
-    populate: false;
+    populate?: false;
 
     /** Custom delimiter to split an Array */
     delimiter?: string;
@@ -34,7 +22,7 @@ declare module '@augu/dotenv' {
   }
 
   interface PopulatedParseOptions<T extends object> {
-    populate: true;
+    populate?: true;
 
     /** Custom delimiter to split an Array */
     delimiter?: string;
@@ -87,6 +75,18 @@ declare module '@augu/dotenv' {
 
   /** Returns the version of this library */
   export const version: string;
+
+  /**
+   * Populates an `.env` file
+   * @param options The options to use
+   */
+  function parse<T extends object>(options: PopulatedParseOptions<T>): void;
+
+  /**
+   * Returns the parsed results from the `.env` file
+   * @param options The options to use
+   */
+  function parse<T extends object>(options: UnpopulatedParseOptions<T>): T;
 
   export default parse;
 }
