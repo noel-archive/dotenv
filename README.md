@@ -3,12 +3,12 @@
 
 ## Usage
 ```ts
-import parse from '@augu/dotenv';
+const parse = require('@augu/dotenv');
 
-// Populates "process.env" with the values provided in your schema
-// or it throws an error if the file didn't follow the schema
 parse({
   file: '.env', // the current directory gets added if it's just `.env`
+  populate: false, // If we should return the values or populate "process.env"
+  readers: [], // Classes of all the custom type readers to use
   schema: {
     // Define a custom schema (if wanted)
   }
