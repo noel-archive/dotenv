@@ -1,0 +1,20 @@
+{
+  "name": "@augu/dotenv",
+  "description": "🌹 Lightweight and type-safe environment variable parser",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "repository": "https://github.com/auguwu/dotenv",
+  "files": ["lib/", "index.d.ts"],
+  "scripts": {
+    "prepare": "yarn lint",
+    "lint": "eslint lib --ext .js --fix"
+  },
+  "dependencies": {
+    "@augu/immutable": "0.3.1"
+  },
+  "devDependencies": {
+    "@augu/eslint-config": "1.6.1",
+    "eslint": "7.5.0"
+  }
+}
