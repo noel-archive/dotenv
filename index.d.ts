@@ -18,6 +18,9 @@ declare module '@augu/dotenv' {
   interface UnpopulatedParseOptions<T extends object> {
     populate: false;
 
+    /** Custom delimiter to split an Array */
+    delimiter?: string;
+
     /** The custom readers to add */
     readers?: (Class<TypeReader>)[];
 
@@ -32,6 +35,9 @@ declare module '@augu/dotenv' {
 
   interface PopulatedParseOptions<T extends object> {
     populate: true;
+
+    /** Custom delimiter to split an Array */
+    delimiter?: string;
 
     /** The custom readers to add */
     readers?: (Class<TypeReader>)[];

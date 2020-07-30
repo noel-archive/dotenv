@@ -55,5 +55,29 @@ parse({
 });
 ```
 
+## Comments
+This library supports a way to comment .env files without being parsed! All you need to do is add a `#` at the start of the pairing and this library will skip it!
+
+> `.env`
+```env
+# A=B
+C=D
+```
+
+> `index.js`
+```js
+const parse = require('@augu/dotenv');
+
+const result = parse({
+  file: '.env', // the current directory gets added if it's just `.env`
+  populate: false, // If we should return the values or populate "process.env"
+  readers: [], // Classes of all the custom type readers to use
+  schema: {
+    // Define a custom schema (if wanted)
+  }
+});
+console.log(result); // { c: 'D' }
+```
+
 ## License
 **@augu/dotenv** is released under the MIT License. Read [here](/LICENSE) for more information.

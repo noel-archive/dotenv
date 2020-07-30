@@ -3,11 +3,12 @@ const parse = require('../lib');
 const result = parse({
   populate: false,
   schema: {
-    value1: 'string',
-    value2: 'boolean',
-    value3: 'int',
-    value4: 'float',
-    value5: 'string|boolean'
+    VALUE1: 'string',
+    VALUE2: 'boolean',
+    VALUE3: 'int',
+    VALUE4: 'float',
+    VALUE5: 'string|boolean',
+    VALUE6: 'array'
   }
 });
 
