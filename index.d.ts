@@ -3,7 +3,7 @@ declare module '@augu/dotenv' {
    * Populates an `.env` file
    * @param options The options to use
    */
-  function parse(options: PopulatedParseOptions): void;
+  function parse<T extends object>(options: PopulatedParseOptions<T>): void;
 
   /**
    * Returns the parsed results from the `.env` file
@@ -30,7 +30,7 @@ declare module '@augu/dotenv' {
     file?: string;
   }
 
-  interface PopulatedParseOptions {
+  interface PopulatedParseOptions<T extends object> {
     populate: true;
 
     /** The custom readers to add */
@@ -38,7 +38,7 @@ declare module '@augu/dotenv' {
 
     /** The schema to follow */
     schema?: {
-      [x: string]: string | SchemaOptions;
+      [x in keyof T]: string | SchemaOptions;
     }
 
     /** The file to use (default: `<current directory>/.env`) */
