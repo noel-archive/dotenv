@@ -1,5 +1,5 @@
-const parse = require('../lib');
-
+const { parse } = require('../lib');
+ 
 const result = parse({
   populate: false,
   schema: {
