@@ -1,7 +1,7 @@
 {
   "name": "@augu/dotenv",
   "description": "🌹 Lightweight and type-safe environment variable parser",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "lib/index.js",
   "license": "MIT",
   "repository": "https://github.com/auguwu/dotenv",

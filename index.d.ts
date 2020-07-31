@@ -80,13 +80,11 @@ declare module '@augu/dotenv' {
    * Populates an `.env` file
    * @param options The options to use
    */
-  function parse<T extends object>(options: PopulatedParseOptions<T>): void;
+  export function parse<T extends object>(options: PopulatedParseOptions<T>): void;
 
   /**
    * Returns the parsed results from the `.env` file
    * @param options The options to use
    */
-  function parse<T extends object>(options: UnpopulatedParseOptions<T>): T;
-
-  export default parse;
+  export function parse<T extends object>(options: UnpopulatedParseOptions<T>): T;
 }
