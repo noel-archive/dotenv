@@ -11,7 +11,7 @@
     "lint": "eslint lib --ext .js --fix"
   },
   "dependencies": {
-    "@augu/immutable": "0.3.1"
+    "@augu/immutable": "0.4.2"
   },
   "devDependencies": {
     "@augu/eslint-config": "1.6.1",
