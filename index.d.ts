@@ -57,9 +57,6 @@ declare module '@augu/dotenv' {
   }
 
   export abstract class TypeReader<T = unknown> {
-    /** The type reader's aliases */
-    public aliases: string[];
-
     /** The type reader's ID */
     public id: string;
 
@@ -68,7 +65,7 @@ declare module '@augu/dotenv' {
      * @param id The ID
      * @param aliases Any additional aliases to use to find this TypeReader
      */
-    constructor(id: string, aliases?: string[]);
+    constructor(id: string);
 
     /**
      * Validates the reader
