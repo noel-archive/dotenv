@@ -3,7 +3,7 @@
 
 ## Usage
 ```ts
-const parse = require('@augu/dotenv');
+const { parse } = require('@augu/dotenv');
 
 parse({
   file: '.env', // the current directory gets added if it's just `.env`
@@ -16,9 +16,9 @@ parse({
 ```
 
 ## Type Readers
-This library supports adding custom type readers to validate anything really! To create one, just make a file `myReader.js` (or any file name you want) and put in the following code:
+This library supports adding custom type readers to add more type-safety and validation when parsing. To create one, just make a file `myReader.js` (or any file name you want) and put in the following code:
 
-> **Note**: This is only applicable in using a schema, it'll error if no schema is implemented.
+> Please note that Type Readers are only supported in the Schema options (`options.schema`), it'll just return as a String if you don't use a proper schema for validation.
 
 ```js
 const { TypeReader } = require('@augu/dotenv');
@@ -80,9 +80,9 @@ console.log(result); // { c: 'D' }
 ```
 
 ## Does this follow the dotenv spec?
-Yes and no. I made this library to show that I wanted to use this for a long time moving from JSON, so I added comments and arrays due to it not being supported both in JSON / dotenv. If you don't use those 2 aspects of this library, then you are following it.
+Yes and no. I made this library to show that I wanted to use this for a long time moving from JSON, so I added Array support due to it not being supported in dotenv. If you don't use the Array support that this library adds, then you are following it.
 
-TL;DR - I don't follow spec rules, I like to add my own twists.
+TL;DR - I don't follow spec rules, I like to add my own twists to the libraries I push out.
 
 ### But why add it if it does support it, but in different ways?
 It's just, sometimes you get too lazy to do something like:
@@ -94,7 +94,7 @@ idk?.split(', '); // optional chaining is only allowed in Node v14
 
 because you would have to see if `SOMETHING_ARRAY` exists and I don't want to do it myself.
 
-I mean, Schemas aren't apart of the .env spec but it's something to validate the file if you don't want the hassle to do `if (typeof process.env.IS_THIS_SOMETHING === 'string')` and other stuff, it's just convivent out of the box.
+I mean, Schemas aren't apart of the .env spec but it's something to validate the file if you don't want the hassle to do `if (typeof process.env.IS_THIS_SOMETHING === 'string')` and other stuff, it's just conivent out of the box.
 
 ## License
 **@augu/dotenv** is released under the MIT License. Read [here](/LICENSE) for more information.
