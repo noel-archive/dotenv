@@ -46,19 +46,29 @@ declare module '@augu/dotenv' {
     /** Chooses one of these values */
     oneOf?: any[];
 
+    /** The minimum value to use (only used in `int` and `string` Type Readers) */
+    min?: number;
+
+    /** The maximum value to use (only used in `int` and `string` Type Readers) */
+    max?: number;
+
     /** The type reader to use */
     type: string;
   }
 
   export abstract class TypeReader<T = unknown> {
+    /** The type reader's aliases */
+    public aliases: string[];
+
     /** The type reader's ID */
     public id: string;
 
     /**
      * Creates a new `TypeReader`
      * @param id The ID
+     * @param aliases Any additional aliases to use to find this TypeReader
      */
-    constructor(id: string);
+    constructor(id: string, aliases?: string[]);
 
     /**
      * Validates the reader
