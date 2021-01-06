@@ -12,7 +12,7 @@
     "test": "jest --config jest.config.js"
   },
   "dependencies": {
-    "@augu/immutable": "0.4.2"
+    "@augu/immutable": "0.6.1"
   },
   "devDependencies": {
     "@augu/eslint-config": "1.7.2",
