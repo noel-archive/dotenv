@@ -15,7 +15,7 @@
     "@augu/immutable": "0.4.2"
   },
   "devDependencies": {
-    "@augu/eslint-config": "1.7.2",
+    "@augu/eslint-config": "1.10.0",
     "@types/jest": "26.0.12",
     "jest": "26.4.2",
     "eslint": "7.8.1"
