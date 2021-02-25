@@ -1,5 +1,5 @@
 # @augu/dotenv
-> :rose: **| Lightweight and type-safe environment variable parser**
+> :rose: **Lightweight and type-safe environment variable parser**
 
 ## Usage
 ```ts
@@ -94,7 +94,7 @@ idk?.split(', '); // optional chaining is only allowed in Node v14
 
 because you would have to see if `SOMETHING_ARRAY` exists and I don't want to do it myself.
 
-I mean, Schemas aren't apart of the .env spec but it's something to validate the file if you don't want the hassle to do `if (typeof process.env.IS_THIS_SOMETHING === 'string')` and other stuff, it's just conivent out of the box.
+I mean, Schemas aren't apart of the .env spec but it's something to validate the file if you don't want the hassle to do `if (typeof process.env.IS_THIS_SOMETHING === 'string')` and other stuff, it's just convinent out of the box.
 
 ## License
 **@augu/dotenv** is released under the MIT License. Read [here](/LICENSE) for more information.
