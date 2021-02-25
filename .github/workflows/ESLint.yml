@@ -33,7 +33,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install global packages
-        run: npm i -g eslint
+        run: npm i -g eslint jest
 
       - name: Installs packages
         run: npm ci

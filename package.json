@@ -10,7 +10,6 @@
     "index.d.ts"
   ],
   "scripts": {
-    "prepare": "npm run lint",
     "lint": "eslint lib --ext .js --fix",
     "test": "jest --config jest.config.js"
   },
